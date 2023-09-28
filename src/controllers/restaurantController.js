@@ -12,14 +12,15 @@ const getRestaurantsEndpoint = async(req, res) => {
 
 const addRestaurantEndpoint = async(req, res) => {
     // TODO: Implement method
+    const restaurant = {
+        "name": "HappyCow",
+        "category": "Vegan Food",
+        "address": "1391 E 41st Ave, Vancouver, BC V5W 1R7, Canadá",
+        "active": true
+    }
     try {
-        const newRestaurant = await addRestaurant({
-            "name": "HappyCow",
-            "category": "Vegan Food",
-            "address": "1391 E 41st Ave, Vancouver, BC V5W 1R7, Canadá",
-            "active": true
-        })
-        return res.json(newRestaurant)
+        const newRestaurant = await addRestaurant(restaurant)
+        return res.status(201).json(restaurant)
     } catch (error) {
         console.log(error)
         return res.send(error)
