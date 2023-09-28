@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use(productRouter);
-app.use(restaurantRouter);
+app.use('/restaurant', restaurantRouter);
 app.use(shipmentRouter);
 app.use(userRouter);
 app.use(orderRouter);
