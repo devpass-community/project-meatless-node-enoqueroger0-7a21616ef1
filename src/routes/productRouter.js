@@ -4,5 +4,7 @@ const { addProductEndpoint, getProductsEndpoint } = require('../controllers/prod
 const productRouter = Router();
 
 //TODO: Add product endpoints
+productRouter.get('/', getProductsEndpoint)
+productRouter.post('/', addProductEndpoint)
 
 module.exports = { productRouter };

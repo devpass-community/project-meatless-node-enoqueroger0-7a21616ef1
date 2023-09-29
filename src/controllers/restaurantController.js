@@ -22,7 +22,6 @@ const addRestaurantEndpoint = async(req, res) => {
         const newRestaurant = await addRestaurant(restaurant)
         return res.status(201).json(restaurant)
     } catch (error) {
-        console.log(error)
         return res.send(error)
     }
     
