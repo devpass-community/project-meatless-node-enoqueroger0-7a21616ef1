@@ -15,7 +15,7 @@ app.use(cors());
 app.use('/product', productRouter);
 app.use('/restaurant', restaurantRouter);
 app.use('/shipment', shipmentRouter);
-app.use(userRouter);
+app.use('/user', userRouter);
 app.use(orderRouter);
 
 app.listen(port, () => {
