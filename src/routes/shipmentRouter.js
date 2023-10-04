@@ -4,5 +4,7 @@ const { addShipmentEndpoint, getShipmentsEndpoint } = require('../controllers/sh
 const shipmentRouter = Router();
 
 //TODO: Add shipment endpoints
+shipmentRouter.get('/', getShipmentsEndpoint)
 
+shipmentRouter.post('/', addShipmentEndpoint)
 module.exports = { shipmentRouter };
