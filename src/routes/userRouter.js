@@ -4,5 +4,6 @@ const { addUserEndpoint, getUsersEndpoint } = require('../controllers/userContro
 const userRouter = Router();
 
 //TODO: Add User endpoints
-
+userRouter.get('/', getUsersEndpoint)
+userRouter.post('/', addUserEndpoint)
 module.exports = { userRouter };
