@@ -4,5 +4,7 @@ const { addOrderEndpoint, getOrdersEndpoint } = require('../controllers/orderCon
 const orderRouter = Router();
 
 //TODO: Add order endpoints
+orderRouter.get('/', getOrdersEndpoint);
+orderRouter.post('/', addOrderEndpoint);
 
 module.exports = { orderRouter };
