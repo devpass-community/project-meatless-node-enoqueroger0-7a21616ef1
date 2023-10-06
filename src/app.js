@@ -16,7 +16,7 @@ app.use('/product', productRouter);
 app.use('/restaurant', restaurantRouter);
 app.use('/shipment', shipmentRouter);
 app.use('/user', userRouter);
-app.use(orderRouter);
+app.use('/order', orderRouter);
 
 app.listen(port, () => {
     console.log(`Server up and running on port: ${port}`)

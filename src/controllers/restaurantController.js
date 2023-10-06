@@ -12,11 +12,12 @@ const getRestaurantsEndpoint = async(req, res) => {
 
 const addRestaurantEndpoint = async(req, res) => {
     // TODO: Implement method
+    const { name, category, address, active } = req.body;
     const restaurant = {
-        "name": "HappyCow",
-        "category": "Vegan Food",
-        "address": "1391 E 41st Ave, Vancouver, BC V5W 1R7, Canadá",
-        "active": true
+        name: name,
+        category: category,
+        address: address,
+        active: active
     }
     try {
         const newRestaurant = await addRestaurant(restaurant)
